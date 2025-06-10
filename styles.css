@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tajawal", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #ffffff 0%, #19376d 100%);
+    color: #1a233a;
+}
+
+html[lang="ar"] {
+    direction: rtl;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+header {
+    background: #fff;
+    text-align: center;
+    padding: 24px 0 0 0;
+    box-shadow: 0 2px 8px rgba(10, 35, 66, 0.07);
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    filter: drop-shadow(0 2px 8px rgba(10, 35, 66, 0.08));
+}
+
+/* Language Switcher */
+.lang-switcher {
+    position: static;
+    text-align: center;
+    margin: 16px 0 12px 0;
+}
+
+.lang-switcher button {
+    margin: 0 4px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    border: 1px solid #3a6ea5;
+    background: #19376d;
+    color: #f4f4f9;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.78rem;
+    min-width: 44px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.lang-switcher button[aria-pressed="true"],
+.lang-switcher button:hover {
+    background: #3a6ea5;
+    color: #fff;
+    border-color: #19376d;
+}
+
+/* Award text styling */
+.award-text {
+    background: linear-gradient(90deg, #19376d 0%, #274472 100%);
+    padding: 1rem 0;
+    color: #f4f4f9;
+}
+
+.award-text .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.award-left,
+.award-right {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 500;
+    color: #f4f4f9;
+}
+
+.award-right {
+    font-family: 'Amiri', serif;
+    direction: rtl;
+}
+
+.lang-ar { display: none; }
+html[lang="ar"] .lang-en { display: none; }
+html[lang="ar"] .lang-ar { display: block; }
+
+.text-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.english,
+.arabic {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.arabic {
+    direction: rtl;
+    font-family: 'Noto Sans Arabic', Arial, sans-serif;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.form-section {
+    background: rgba(20, 40, 80, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(10, 35, 66, 0.15);
+    max-width: 700px;
+    margin: 0 auto 32px auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #f4f4f9;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #274472;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #eaf1fb;
+    color: #19376d;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3a6ea5;
+    background: #fff;
+}
+
+.form-group input:invalid:focus,
+.form-group select:invalid:focus {
+    border-color: #dc3545;
+    background: #fff5f5;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #19376d 0%, #3a6ea5 100%);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #274472 0%, #19376d 100%);
+}
+
+footer {
+    background: transparent;
+    text-align: center;
+    padding: 24px 0 0 0;
+}
+
+.logo2 {
+    max-width: 80%;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .container {
+        padding: 0 16px;
+    }
+    .form-section {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .award-text .container {
+        flex-direction: column;
+    }
+    .award-left,
+    .award-right {
+        flex: none;
+        width: 100%;
+    }
+    .text-container {
+        flex-direction: column;
+    }
+    .form-section {
+        padding: 20px;
+    }
+    .award-text h3 {
+        font-size: 1.2rem;
+    }
+    .english,
+    .arabic {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 100%;
+    }
+    .logo2 {
+        max-width: 80%;
+    }
+    .form-group input,
+    .form-group select {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+    button[type="submit"] {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .form-section {
+        padding: 10px;
+    }
+    .lang-switcher {
+        margin: 8px 0 8px 0;
+    }
+    .lang-switcher button {
+        font-size: 0.65rem;
+        padding: 2px 7px;
+        min-width: 28px;
+    }
+}

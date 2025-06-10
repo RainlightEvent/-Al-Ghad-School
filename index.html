@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Ghad School</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">   
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="CHARTER LOGO.png" alt="Al Ghad School Logo" class="logo">
+        </div>
+    </header>
+    <div class="award-text">
+        <div class="container">
+            <h3 class="award-right lang-ar" lang="ar">حياكم في حفل تخرج مدرسة الغد 2025</h3>
+            <h3 class="award-left lang-en" lang="en">Welcome To The Graduation Ceremony for Al Ghad School 2025</h3>
+        </div>
+    </div>
+    <div class="text-container">
+        <span class="english lang-en"><h3>Register your Credentials</h3></span>
+        <span class="arabic lang-ar"><h3>سجل بيانات اعتمادك</h3></span>
+    </div>
+    <main>
+        <div class="lang-switcher">
+            <button id="btn-en" onclick="setLang('en')" class="active" aria-label="Switch to English">English</button>
+            <button id="btn-ar" onclick="setLang('ar')" aria-label="Switch to Arabic">العربية</button>
+        </div>
+        <section class="form-section" aria-live="polite">
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="title">
+                        <span class="lang-en">Title *</span>
+                        <span class="lang-ar">اللقب *</span>
+                    </label>
+                    <select id="title" name="title" required aria-required="true">
+                        <option value="" disabled selected>Select Title</option>
+                            <span class="lang-en">Select Title</span>
+                            <span class="lang-ar">اختر اللقب</span>
+                        </option>
+                        <option value="Mr">Mr / السيد</option>
+                        <option value="Ms">Ms / السيدة</option>
+                        <option value="Dr">Dr / دكتور</option>
+                        <option value="Prof">Prof / أستاذ</option>
+                        <option value="Other">Other / أخرى</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">
+                        <span class="lang-en">Name *</span>
+                        <span class="lang-ar">الاسم *</span>
+                    </label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="surname">
+                        <span class="lang-en">Surname *</span>
+                        <span class="lang-ar">اسم العائلة *</span>
+                    </label>
+                    <input type="text" id="surname" name="surname" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="mobile">
+                        <span class="lang-en">Mobile Number *</span>
+                        <span class="lang-ar">رقم الجوال *</span>
+                    </label>
+                    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10,15}" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">
+                        <span class="lang-en">Email ID *</span>
+                        <span class="lang-ar">البريد الإلكتروني *</span>
+                    </label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="designation">
+                        <span class="lang-en">Designation *</span>
+                        <span class="lang-ar">المسمى الوظيفي *</span>
+                    </label>
+                    <input type="text" id="designation" name="designation" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="organisation">
+                        <span class="lang-en">Organisation *</span>
+                        <span class="lang-ar">المؤسسة *</span>
+                    </label>
+                    <input type="text" id="organisation" name="organisation" required aria-required="true">
+                </div>
+                <button type="submit">
+                    <span class="lang-en">Register</span>
+                    <span class="lang-ar">تسجيل</span>
+                </button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <img src="Footer.png" alt="Al Ghad School Footer Logo" class="logo2">
+        </div>
+    </footer>
+</body>
+</html>
